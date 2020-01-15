@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/go-openapi/loads"
-	"github.com/scraly/http-go-server/pkg/swagger/server/restapi"
-	"github.com/scraly/http-go-server/pkg/swagger/server/restapi/operations"
+	"github.com/veluts77/http-go-server/pkg/swagger/server/restapi"
+	"github.com/veluts77/http-go-server/pkg/swagger/server/restapi/operations"
 	"log"
 )
 
@@ -14,7 +14,7 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	
+
 	api := operations.NewHelloAPI(swaggerSpec)
 	server := restapi.NewServer(api)
 	defer server.Shutdown()
